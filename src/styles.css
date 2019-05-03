@@ -1,0 +1,236 @@
+/* img {
+  border-radius: 50%;
+} */
+
+main {
+  width: 350px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  max-width: 48rem;
+}
+
+.main-container h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.main-container span {
+  text-align: center;
+  line-height: 2rem;
+}
+
+.main-container>div {
+  position: relative;
+}
+
+.main-input {
+  width: 100%;
+  font-size: 14px;
+  word-wrap: break-word;
+  line-height: 1em;
+  outline: 0;
+  white-space: normal;
+  min-height: 2em;
+  background: #fff;
+  display: inline-block;
+  padding: 1em 2em 1em 1em;
+  color: rgba(0, 0, 0, .87);
+  box-shadow: none;
+  border: 1px solid rgba(34, 36, 38, .15);
+  border-radius: .30rem;
+  transition: box-shadow .1s ease, width .1s ease;
+  box-sizing: border-box;
+}
+
+.main-input:focus {
+  border-color: #96c8da;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, .15);
+}
+
+.main-input.opened {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.main-input.opened:focus {
+  box-shadow: none;
+}
+
+.main-menu {
+  padding: 0;
+  margin-top: 0;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  max-height: 20rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  outline: 0;
+  transition: opacity .1s ease;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, .15);
+  border: none;
+}
+
+.main-menu .error {
+  padding: 1rem;
+}
+
+.main-menu.opened {
+  border-top-width: 0;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-color: #96c8da;
+  border-style: solid;
+  border-radius: 0 0 .28571429rem .28571429rem;
+}
+
+.main-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  height: auto;
+  text-align: left;
+  border-top: none;
+  line-height: 1em;
+  color: rgba(0, 0, 0, .87);
+  font-size: 1rem;
+  text-transform: none;
+  font-weight: 400;
+  box-shadow: none;
+  padding: .8rem 1.1rem;
+  white-space: normal;
+  word-wrap: normal;
+}
+
+.main-item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 1rem;
+}
+
+.main-item.selected, .main-item:hover {
+  font-weight: 700;
+  background: rgba(0, 0, 0, .03);
+}
+
+.profile-container {
+  margin-top: 2rem;
+  padding: 2rem;
+  max-width: 48rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 1rem;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: .25rem;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2);
+}
+
+.profile-content>span {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+}
+
+.profile-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 8rem;
+}
+
+.profile-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2);
+}
+
+.profile-close:after {
+  content: '\2716';
+}
+
+.profile-gogit {
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  background: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.profile-gogit img {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+}
+
+.profile-name {
+  min-width: 200px;
+  text-align: center;
+}
+
+.profile-counters-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.profile-counters {
+  min-width: 100px;
+  padding: .5rem;
+  flex-grow: 1;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.profile-counters:first-of-type, .profile-counters:nth-of-type(2) {
+  border-color: #aaa;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+@media screen and (min-width: 60em) {
+  .profile-container, .main-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 60em) and (min-width: 30em) {
+  .main-container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
